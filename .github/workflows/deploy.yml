@@ -27,11 +27,22 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Install + build frontend
+      # - name: Install + build frontend
+      #   working-directory: client
+      #   run: |
+      #     npm ci
+      #     npm run build
+      - name: Install client deps
         working-directory: client
-        run: |
-          npm ci
-          npm run build
+        run: npm ci
+
+      - name: Build shared (required if client imports built output)
+        working-directory: shared
+        run: npm ci && npm run build
+
+      - name: Build frontend
+        working-directory: client
+        run: npm run build
 
       - name: Deploy to S3
         run: |

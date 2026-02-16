@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyPluginAsync } from 'fastify';
-import { User, ApiResponse } from '@monorepo/shared';
+import { User, ApiResponse, logUser } from '@monorepo/shared';
 import { fakeAuth } from '../middleware/auth';
 
 export const userRoutes: FastifyPluginAsync = async (app: FastifyInstance) => {
@@ -10,6 +10,8 @@ export const userRoutes: FastifyPluginAsync = async (app: FastifyInstance) => {
       email: 'chris@zuant.com',
       createdAt: new Date(),
     };
+
+    logUser(user);
 
     const response: ApiResponse<User> = {
       success: true,

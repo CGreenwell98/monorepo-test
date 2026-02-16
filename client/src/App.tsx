@@ -11,6 +11,8 @@ function App() {
   const [fetchedUser, setFetchedUser] = useState<User | null>(null);
   const [fetchError, setFetchError] = useState<string | null>(null);
 
+  // changes test
+
   const fetchData = async () => {
     setLoading(true);
     setFetchError(null);

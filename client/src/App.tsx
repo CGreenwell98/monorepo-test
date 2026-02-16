@@ -3,15 +3,13 @@ import axios from 'axios'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import type { User } from '@monorepo/shared';
+import { logUser, type User } from '@monorepo/shared';
 
 function App() {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [fetchedUser, setFetchedUser] = useState<User | null>(null);
   const [fetchError, setFetchError] = useState<string | null>(null);
-
-  // changes test
 
   const fetchData = async () => {
     setLoading(true);
@@ -22,8 +20,9 @@ function App() {
       const res = await axios.get(`${apiUrl}/user`, {headers: {Authorization: 'Bearer faketoken'}});
       // server returns { success: true, data: user }
       if (res.data && res.data.data) {
-        console.log('fetched data: ', res.data.data)
-        setFetchedUser(res.data.data as User);
+        const user = res.data.data as User;
+        logUser(user);
+        setFetchedUser(user);
       } else {
         setFetchError('No data in response');
       }

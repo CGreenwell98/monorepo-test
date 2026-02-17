@@ -1,0 +1,2 @@
+    // "dev:all": "concurrently -k \"npm --prefix packages/shared run dev\" \"npm --prefix apps/client run dev\" \"npm --prefix apps/server run dev\"",
+    // "dev": "npm run dev:all"

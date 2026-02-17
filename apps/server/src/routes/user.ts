@@ -1,5 +1,7 @@
 import { FastifyInstance, FastifyPluginAsync } from 'fastify';
-import { User, ApiResponse, logUser } from '@monorepo/shared';
+import type { User, ApiResponse } from '@monorepo/shared';
+// runtime import from the shared package build (CJS) - provide a typed shape
+const { logUser } = require('../../../../packages/shared/dist/cjs/functions/logUser') as { logUser: (user: User) => void };
 import { fakeAuth } from '../middleware/auth';
 
 export const userRoutes: FastifyPluginAsync = async (app: FastifyInstance) => {

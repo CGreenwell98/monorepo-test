@@ -12,10 +12,14 @@
     // For nodejs:
     "lib": ["esnext"],
     "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/shared": ["../../packages/shared/dist"]
+    },
     // and ensure @types/node is installed as a devDependency
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    // "moduleResolution": "node",
+    "moduleResolution": "node",
 
     // Other Outputs
     "sourceMap": true,

@@ -1,38 +1,40 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import UserCard from '../features/users/components/UserCard';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Header } from '@app/layout/header';
+import { DevTools } from '@app/layout/devtools';
+import { routes } from '@app/routes';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const { t } = useTranslation();
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-        <UserCard />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <div className="flex flex-col min-h-screen w-full" style={{
+          backgroundColor: 'var(--bg-primary)',
+          color: 'var(--text-primary)',
+          transition: 'background-color 200ms, color 200ms'
+        }}>
+          <Header />
+          <main className="flex-1 w-full">
+            <Suspense fallback={<div className="p-4">{t('common.loading')}</div>}>
+              <Routes>
+                {routes.map((route, index) => (
+                  <Route key={index} path={route.path} element={route.element} />
+                ))}
+                {/* Default redirect to home or users page */}
+                <Route path="/" element={<Navigate to="/users" replace />} />
+              </Routes>
+            </Suspense>
+          </main>
+        </div>
+      </Router>
+      <DevTools />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+

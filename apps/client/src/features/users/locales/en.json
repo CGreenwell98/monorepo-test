@@ -1,0 +1,14 @@
+{
+  "users": {
+    "page": {
+      "title": "Users",
+      "description": "Welcome to the Users feature. Manage and view user information."
+    },
+    "fetchData": "Fetch Data",
+    "fetching": "Fetching...",
+    "name": "Name",
+    "email": "Email",
+    "noData": "No data in response",
+    "errorFetching": "Error fetching user"
+  }
+}

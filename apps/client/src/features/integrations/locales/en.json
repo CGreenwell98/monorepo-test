@@ -1,0 +1,16 @@
+{
+  "integrations": {
+    "page": {
+      "title": "Integrations",
+      "description": "Welcome to the Integrations feature. Connect and manage integrations."
+    },
+    "title": "Integrations",
+    "available": "Available Integrations",
+    "configure": "Configure",
+    "test": "Test Connection",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "testSuccess": "Connection successful",
+    "testFailed": "Connection failed"
+  }
+}

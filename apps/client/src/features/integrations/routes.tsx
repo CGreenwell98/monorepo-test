@@ -1,9 +1,17 @@
-// Route definitions for integrations feature
+import { lazy } from 'react';
+import type { RouteObject } from 'react-router-dom';
 
-import React from 'react';
+// Lazy load integrations pages
+const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage'));
 
-export const integrationsRoutes = [
-  // { path: '/integrations', element: <IntegrationsList /> },
+// Integrations feature routes
+export const integrationsRoutes: RouteObject[] = [
+  {
+    path: '/integrations',
+    element: <IntegrationsPage />,
+  },
 ];
 
 export default integrationsRoutes;
+
+

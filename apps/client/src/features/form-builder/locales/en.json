@@ -1,0 +1,16 @@
+{
+  "formBuilder": {
+    "page": {
+      "title": "Form Builder",
+      "description": "Welcome to the Form Builder feature. Create and design custom forms."
+    },
+    "title": "Form Builder",
+    "create": "Create Form",
+    "edit": "Edit Form",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "addField": "Add Field",
+    "noForms": "No forms available"
+  }
+}

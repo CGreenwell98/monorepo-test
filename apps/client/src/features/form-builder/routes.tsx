@@ -1,10 +1,17 @@
-// Route definitions for form-builder feature
+import { lazy } from 'react';
+import type { RouteObject } from 'react-router-dom';
 
-import React from 'react';
+// Lazy load form-builder pages
+const FormBuilderPage = lazy(() => import('./pages/FormBuilderPage'));
 
-export const formBuilderRoutes = [
-  // { path: '/forms', element: <FormsList /> },
-  // { path: '/forms/:id', element: <FormEditor /> },
+// Form builder feature routes
+export const formBuilderRoutes: RouteObject[] = [
+  {
+    path: '/forms',
+    element: <FormBuilderPage />,
+  },
 ];
 
 export default formBuilderRoutes;
+
+

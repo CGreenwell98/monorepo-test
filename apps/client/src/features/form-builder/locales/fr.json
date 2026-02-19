@@ -1,0 +1,16 @@
+{
+  "formBuilder": {
+    "page": {
+      "title": "Créateur de formulaires",
+      "description": "Bienvenue dans la fonctionnalité Créateur de formulaires. Créez et concevez des formulaires personnalisés."
+    },
+    "title": "Générateur de formulaires",
+    "create": "Créer un formulaire",
+    "edit": "Modifier le formulaire",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "addField": "Ajouter un champ",
+    "noForms": "Aucun formulaire disponible"
+  }
+}

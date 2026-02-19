@@ -1,0 +1,33 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "hello": "Bonjour",
+    "goodbye": "Au revoir",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "countIs": "le compte est",
+    "editFile": "Modifier",
+    "saveToTest": "et enregistrer pour tester HMR",
+    "clickLogos": "Cliquez sur les logos Vite et React pour en savoir plus",
+    "search": "Rechercher..."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "header": {
+    "monorepo": "Monorepo",
+    "search": "Rechercher...",
+    "toggleTheme": "Basculer le mode de thème",
+    "selectLanguage": "Sélectionner la langue",
+    "features": "Fonctionnalités"
+  },
+  "devtools": {
+    "title": "Outils de développement",
+    "themesTab": "Thèmes",
+    "selectTheme": "Sélectionner un thème",
+    "currentTheme": "Thème actuel"
+  }
+}

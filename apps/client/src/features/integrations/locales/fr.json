@@ -1,0 +1,16 @@
+{
+  "integrations": {
+    "page": {
+      "title": "Intégrations",
+      "description": "Bienvenue dans la fonctionnalité Intégrations. Connectez et gérez les intégrations."
+    },
+    "title": "Intégrations",
+    "available": "Intégrations disponibles",
+    "configure": "Configurer",
+    "test": "Tester la connexion",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "testSuccess": "Connexion réussie",
+    "testFailed": "Échec de la connexion"
+  }
+}

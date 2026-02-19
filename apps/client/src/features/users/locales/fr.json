@@ -1,0 +1,14 @@
+{
+  "users": {
+    "page": {
+      "title": "Utilisateurs",
+      "description": "Bienvenue dans la fonctionnalité Utilisateurs. Gérez et consultez les informations utilisateur."
+    },
+    "fetchData": "Récupérer les données",
+    "fetching": "Récupération...",
+    "name": "Nom",
+    "email": "E-mail",
+    "noData": "Aucune donnée dans la réponse",
+    "errorFetching": "Erreur lors de la récupération de l'utilisateur"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "hello": "Hello",
+    "goodbye": "Goodbye",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "countIs": "count is",
+    "editFile": "Edit",
+    "saveToTest": "and save to test HMR",
+    "clickLogos": "Click on the Vite and React logos to learn more",
+    "search": "Search..."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "monorepo": "Monorepo",
+    "search": "Search...",
+    "toggleTheme": "Toggle theme mode",
+    "selectLanguage": "Select language",
+    "features": "Features"
+  },
+  "devtools": {
+    "title": "DevTools",
+    "themesTab": "Themes",
+    "selectTheme": "Select Theme",
+    "currentTheme": "Current Theme"
+  }
+}
